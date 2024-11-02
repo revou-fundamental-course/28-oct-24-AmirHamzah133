@@ -11,10 +11,14 @@ body {
 }
 
 /* Mencoba responsivitas with media queries */
-@media (max-width: 768px) {
+@media (max-width: 668px) {
   nav ul {
     flex-direction: column;
     align-items: center;
+  }
+
+  .header {
+    padding-top: 70px;
   }
 }
 
@@ -23,8 +27,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: #fff;
-  backdrop-filter: blur(40px);
+  background-color: #ffffff;
   z-index: 999;
 }
 nav ul {
@@ -33,7 +36,6 @@ nav ul {
     list-style-type: none;
     padding-right: 50px;
     justify-content: flex-end;
-    background-color: #fff;
   }
 
   nav li a {
@@ -82,6 +84,17 @@ nav ul {
   align-items: center;
 }
 
+.gender-container {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 10px 70px 0px rgba(184, 184, 184, 0.500);
+}
+
 /* Mengatur agar user input menjadi baris */
   .form, input {
     display: block;
@@ -90,6 +103,7 @@ nav ul {
 /* Memberi jarak antar input */
 .form {
   padding-bottom: 10px;
+  font-size: 12px;
   color: rgba(0, 0, 0, 0.500);
 }
 
@@ -147,4 +161,18 @@ button {
   color: #fff;
   font-weight: 400;
   background-color: var(--primary-color);
+}
+
+.reset:hover {
+    cursor: pointer;
+    background-color: rgb(143, 33, 33);
+    /* transform: translateY(1.4px); */
+    transition: ease-in-out 0.2s;
+}
+
+.hitung:hover {
+    cursor: pointer;
+    background-color: #01c92d;
+    /* transform: translateY(1.4px); */
+    transition: ease-in-out 0.2s;
 }

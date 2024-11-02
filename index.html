@@ -22,7 +22,7 @@
               <li><a href="#service">Service</a></li>
             </ul>
           </nav>
-        </header><br><br><br><br><br>
+        </header><br><br><br><br><br><br> <!--Masih menggunakan br untuk membuat baris baru karena keterbatasan pengetahuan (penggunaan tag mungkin kurang profesional)-->
          <header>
   </section>
 
@@ -37,7 +37,7 @@
     <h1 class>BMI <span class="calc">Calculator+</span></h1>
   </header>
   <article>
-    <h2 class="subjudul" style="text-align: center;">Kalkulator untuk menghitung <span class="subjudul-color">berat badan Anda</span>.</h2>
+    <h2 class="subjudul" style="text-align: center;">Kalkulator untuk menghitung <span class="subjudul-color">berat badan Anda</span> dengan cepat dan mudah.</h2>
   </article>
 </div>
 </header><br>
@@ -47,14 +47,20 @@
   
 <section id="service"> <!--memberi id service untuk navigasi -->
 <div class="jenis-kelamin">
-  <header>
     <h2>Jenis Kelamin</h2>
-  </header>
-  <select>
-    <option value="pria">Pria</option>
-    <option value="wanita">Wanita</option>
-  </select><br>
-</div>
+  <form>
+    <div class="gender-container">
+        <label for="gender-option1" name="gender1" id="gender-opt1" value="pria">
+          <input type="radio"> 
+        <span class="male">Pria</span>
+        </label></tr>
+        <label for="gender-option2" name="gender2" id="gender-opt2" value="wanita">
+          <input type="radio"> 
+        <span class="female">Wanita</span>
+        </label>
+      </div>
+      </div>
+      </form><br>
 
 <!-- Fitur utama (kalkulator) -->
 <div class="form-wrapper">

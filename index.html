@@ -3,10 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
     <link rel="stylesheet" href="css\style.css"/>
-    <title>BMI project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!-- Inisialisasi font dari Google Fonts (Inter) -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+  <!-- Navbar (navigation bar) -->
+  <section id="home"> <!-- Memberi id home untuk navigasi-->
+    <nav class="navbar">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#service">Service</a></li>
+            </ul>
+          </nav>
+        </header><br><br><br><br><br>
+         <header>
+  </section>
+
+<!-- Konten utama -->
+<main>
+  <header>
+    <div class="header">
+  <header style="height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;">
+    <h1 class>BMI <span class="calc">Calculator+</span></h1>
+  </header>
+  <article>
+    <h2 class="subjudul" style="text-align: center;">Kalkulator untuk menghitung <span class="subjudul-color">berat badan Anda</span>.</h2>
+  </article>
+</div>
+</header><br>
+
+<!-- Kalkulator section -->
+<!-- Gender selection -->
+  
+<section id="service"> <!--memberi id service untuk navigasi -->
+<div class="jenis-kelamin">
+  <header>
+    <h2>Jenis Kelamin</h2>
+  </header>
+  <select>
+    <option value="pria">Pria</option>
+    <option value="wanita">Wanita</option>
+  </select><br>
+</div>
+
+<!-- Fitur utama (kalkulator) -->
+<div class="form-wrapper">
+  <div class="form-container">
+    <form>
+      <header style="text-align: center;">
+        <h2>Kalkulasi</h2><br>
+      </header>
+          <div class="form">
+              <label for="berat-badan">Berat Badan (Kg)</label>
+              <input id="berat-badan"/><br>
+              <label for="usia">Usia (Tahun)</label>
+              <input id="usia"/><br>
+              <label for="tinggi-badan">Tinggi Badan (Cm)</label>
+              <input id="tinggi-badan"/>
+          </div><br>
+              <div class="button-container">
+                  <button class="reset">Reset</button>
+                  <button class="hitung">Lihat Hasil</button>
+          </div>
+  </form>
+  </div>
+</div>
+    </section>
+</main>
+
+<footer>
+  <article>Made by Amir Hamzah</article>
+</footer>
 </body>
 </html>

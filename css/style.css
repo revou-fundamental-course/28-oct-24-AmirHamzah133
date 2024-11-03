@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: inter, sans-serif;
   background-color: #fff;
@@ -18,12 +22,16 @@ body {
 }
 
 /* Mencoba responsivitas dengan media queries */
-@media (max-width: 668px) {
+@media (max-width: 573px) {
   nav ul {
     flex-direction: column;
     align-items: center;
 
     .img {
+      display: none;
+    }
+
+    .logo-nav-kiri {
       display: none;
     }
   }
@@ -34,7 +42,12 @@ body {
   }
 }
 
-.img {
+.logo-nav-kiri {
+  color: #000;
+  text-decoration: none;
+}
+
+.logo-kiri {
   display: flex;
   width: 100%;
   align-items: center;
@@ -54,7 +67,7 @@ body {
   font-size: 1rem;
   position: fixed;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.030);
-  /* border: 1px solid rgba(0, 0, 0, 0.090); */
+  /* border: 1px solid rgba(0, 0, 0, 0.080); */
 }
 
 /* Memposisikan display list menu dari navbar menjadi sejajar dan flex-end */
@@ -77,7 +90,7 @@ nav ul {
   }
 
   /* Membuat animasi perubahan warna dan posisi saat dihover pada menu navigation bar agar lebih terasa dinamis dan interaktif*/
-  a:hover {
+  .menu:hover {
     transform: translateY(2.5px);
     border-radius: 12px;
     /* background-color: var(--primary-color); */
@@ -86,7 +99,7 @@ nav ul {
   }
 
   main {
-    padding-top: 30px;
+        padding-top: 30px;
   }
 
 /* Memposisikan judul & subjudul jadi di tengah */
@@ -119,11 +132,19 @@ nav ul {
   align-items: center;
 }
 
+.pria {
+  display: flex;
+}
+
+.wanita {
+  display: flex;
+}
+
 .gender-container {
     display: flex;
     width: 200px;
     height: 50px;
-    column-gap: 50px;
+    column-gap: 20px;
     justify-content: center;
     align-items: center;
     border-radius: 20px;

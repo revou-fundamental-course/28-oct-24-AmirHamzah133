@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI calculator</title>
+    <script src="js\script.js"></script>
     <link rel="stylesheet" href="css\style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<!-- Inisialisasi font dari Google Fonts (Inter) -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-</head>
-<body>
+    <!-- Inisialisasi font dari Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
 
   <!-- Navbar (navigation bar) -->
   <section id="home"> <!-- Memberi id home untuk navigasi-->
     <nav class="navbar">
             <ul>
-              <div class="img">
-                <img class="logo" src="assets\Logo saya.png" width="28px" height="28px" style="color: #fff;"/></li>
-                <h1>BMI Calc+</h1>
+              <div class="logo-kiri">
+                <!-- <img class="logo" src="assets\Logo saya.png" width="28px" height="28px" style="color: #fff;"/></li> -->
+                <a class="logo-nav-kiri" href="#home"><h1>BMI Calc+</h1></a>
               </div>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#service">Service</a></li>
+              <li><a class="menu" href="#home">Home</a></li>
+              <li><a class="menu" href="#about">About</a></li>
+              <li><a class="menu" href="#service">Service</a></li>
             </ul>
           </nav>
         </header><br><br><br><br><br><br> <!--Masih menggunakan br untuk membuat baris baru karena keterbatasan pengetahuan (penggunaan tag mungkin kurang profesional)-->
@@ -52,20 +53,20 @@
   
 <section id="service"> <!--memberi id service untuk navigasi -->
 <div class="jenis-kelamin">
-    <h2>Piih Gender Anda</h2>
+  <h2>Pilih Gender Anda</h2>
   <form>
     <div class="gender-container">
-        <label for="gender-option1" name="gender1" id="gender-opt1" value="pria">
-          <input type="radio"> 
+      <label class="pria" for="pria">
+        <input type="radio" id="pria" name="gender" value="pria">
         <span class="male">Pria</span>
-        </label></tr>
-        <label for="gender-option2" name="gender2" id="gender-opt2" value="wanita">
-          <input type="radio"> 
+      </label>
+      <label class="wanita" for="wanita">
+        <input type="radio" id="wanita" name="gender" value="wanita">
         <span class="female">Wanita</span>
-        </label>
-      </div>
-      </div>
-      </form><br>
+      </label>
+    </div>
+  </form>
+</div><br>
 
 <!-- Fitur utama (kalkulator) -->
 <div class="form-wrapper">
@@ -76,11 +77,11 @@
       </header>
           <div class="form">
               <label for="berat-badan">Berat Badan (Kg)</label>
-              <input id="berat-badan"/><br>
+              <input type="number" id="berat-badan" required/><br>
               <label for="usia">Usia (Tahun)</label>
-              <input id="usia"/><br>
+              <input type="number" id="usia"required><br>
               <label for="tinggi-badan">Tinggi Badan (Cm)</label>
-              <input id="tinggi-badan"/>
+              <input type="number" id="tinggi-badan" required/>
           </div><br>
               <div class="button-container">
                   <button class="reset">Reset</button>
@@ -96,7 +97,7 @@
       <section id="about">
         <article>
           <h2>Apa itu BMI Calculator?</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officia quae iure similique quisquam accusamus, quibusdam assumenda mollitia doloribus quas, nisi atque maiores ipsa illum. Cum laudantium, odit saepe explicabo repellendus quasi, aperiam id quo corporis, doloremque animi? Dignissimos, quasi laudantium modi similique iure quam ducimus? Culpa hic similique sunt eum corrupti? Doloribus eius deleniti dignissimos odio illo nemo harum a voluptas, blanditiis iste quaerat facere necessitatibus minus vel aspernatur sit mollitia consequuntur quibusdam autem molestias itaque assumenda. Accusantium aliquid harum ipsa perspiciatis rerum ipsam, dolores reiciendis architecto laborum exercitationem quam, deserunt excepturi repellat nulla libero vitae expedita eos nam.</p>
+          <p style="font-weight: 300;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officia quae iure similique quisquam accusamus, quibusdam assumenda mollitia doloribus quas, nisi atque maiores ipsa illum. Cum laudantium, odit saepe explicabo repellendus quasi, aperiam id quo corporis, doloremque animi? Dignissimos, quasi laudantium modi similique iure quam ducimus? Culpa hic similique sunt eum corrupti? Doloribus eius deleniti dignissimos odio illo nemo harum a voluptas, blanditiis iste quaerat facere necessitatibus minus vel aspernatur sit mollitia consequuntur quibusdam autem molestias itaque assumenda. Accusantium aliquid harum ipsa perspiciatis rerum ipsam, dolores reiciendis architecto laborum exercitationem quam, deserunt excepturi repellat nulla libero vitae expedita eos nam.</p>
         </article>
       </section>
       

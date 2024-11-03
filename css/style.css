@@ -85,6 +85,10 @@ nav ul {
     transition: ease-in 0.1s;
   }
 
+  main {
+    padding-top: 30px;
+  }
+
 /* Memposisikan judul & subjudul jadi di tengah */
   .header {
     display: flex;

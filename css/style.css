@@ -1,41 +1,70 @@
 
 /* root font default */
+* {
+  font-family: inter, sans-serif;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: inter;
+  font-family: inter, sans-serif;
+  background-color: #fff;
 }
 
 /* Inisialisasi root warna primer UI */
 :root {
-    --primary-color: #00EC33;
-    --secondary-color: ;
+    --primary-color: #2bed00;
+    --secondary-color: #08e600;
+    --button-primary: #25ca00;
 }
 
-/* Mencoba responsivitas with media queries */
+/* Mencoba responsivitas dengan media queries */
 @media (max-width: 668px) {
   nav ul {
     flex-direction: column;
     align-items: center;
+
+    .img {
+      display: none;
+    }
   }
 
+  /* Penyesuaian letak dengan elemen padding-top karena Sebelumnya ketimpa oleh navbar ketika adaptasi lebar layar */
   .header {
     padding-top: 70px;
   }
 }
 
+.img {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 30px;
+  font-size: 1.2rem;
+}
+
+/* Penyesuaian navbar agar posisinya tetap fix ketika website discroll */
 .navbar {
-  scroll-behavior: smooth;
-  position: fixed;
+  padding: 0;
   width: 100%;
   top: 0;
-  background-color: #ffffff;
+  left: 0;
+  background-color: #fff;
   z-index: 999;
+  font-size: 1rem;
+  position: fixed;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.030);
+  /* border: 1px solid rgba(0, 0, 0, 0.090); */
 }
+
+/* Memposisikan display list menu dari navbar menjadi sejajar dan flex-end */
 nav ul {
     display: flex;
     column-gap: 20px;
     list-style-type: none;
     padding-right: 50px;
     justify-content: flex-end;
+    align-items: center;
   }
 
   nav li a {
@@ -43,9 +72,8 @@ nav ul {
     color: #333;
     font-weight: 400;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1rem;
     text-decoration: none;
-    font-size: 1rem;
   }
 
   /* Membuat animasi perubahan warna dan posisi saat dihover pada menu navigation bar agar lebih terasa dinamis dan interaktif*/
@@ -69,6 +97,9 @@ nav ul {
     font-size: 1rem;
     font-weight: 400;
     color:rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-left: 14px;
+    margin-right: 14px;
   }
 
 /* Warna span dari judul */
@@ -137,10 +168,17 @@ input {
     translateY(40px);
 }
 
+/* Penyesuaian warna outline saat user memasukkan input agar tidak terlalu kontras */
+.form input:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.8);
+}
+
 button {
   padding: 8px;
-  border-radius: 6px;
+  border-radius: 16px;
   border: none;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .button-container {
@@ -151,28 +189,37 @@ button {
 }
 
 .reset {
-  width: 45%;
+  width: 40%;
+  color: #121212;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(29, 29, 29, 0.5)
+}
+
+
+.reset:hover {
+  cursor: pointer;
   color: #fff;
-  background-color: brown;
-  font-weight: 400;
+  background-color: rgb(29, 29, 29);
+  /* transform: translateY(1.4px); */
+  transition: ease-in-out 0.2s;
 }
 
 .hitung {
+  padding-left: 14.5px;
+  padding-right: 14.5px;
   color: #fff;
-  font-weight: 400;
-  background-color: var(--primary-color);
-}
-
-.reset:hover {
-    cursor: pointer;
-    background-color: rgb(143, 33, 33);
-    /* transform: translateY(1.4px); */
-    transition: ease-in-out 0.2s;
+  background-color: var(--button-primary);
+  /* border: 1px solid rgba(0, 0, 0, 0.5) */
 }
 
 .hitung:hover {
     cursor: pointer;
-    background-color: #01c92d;
+    color: #fff;
+    background-color: #349b00;
     /* transform: translateY(1.4px); */
     transition: ease-in-out 0.2s;
+}
+
+main .article {
+  padding: 8rem 7%;
 }

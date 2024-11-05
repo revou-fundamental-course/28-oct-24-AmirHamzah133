@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI calculator</title>
-    <script src="js\script.js"></script>
     <link rel="stylesheet" href="css\style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -19,8 +18,7 @@
     <nav class="navbar">
             <ul>
               <div class="logo-kiri">
-                <!-- <img class="logo" src="assets\Logo saya.png" width="28px" height="28px" style="color: #fff;"/></li> -->
-                <a class="logo-nav-kiri" href="#home"><h1>BMI Calc+</h1></a>
+                <a class="logo-nav-kiri" href="#home"><h1>BMI<span class="span-logo">Calc+</span></h1></a>
               </div>
               <li><a class="menu" href="#home">Home</a></li>
               <li><a class="menu" href="#about">About</a></li>
@@ -33,20 +31,22 @@
 
 <!-- Konten utama -->
 <main>
-  <div class="fade"></div>
   <header>
-    <div class="header">
-  <header style="height: 30px;
+    <div class="header-wrapper">
+      <div class="header">
+        <header style="height: 30px;
   text-align: center;
   display: flex;
   align-items: center;">
-    <h1 class>BMI <span class="calc">Calculator+</span></h1>
+    <h1 class>BMI <span class="calc">Calculator</span></h1>
   </header>
   <article>
     <h2 class="subjudul" style="text-align: center;">Kalkulator untuk menghitung <span class="subjudul-color">berat badan Anda</span> dengan cepat dan mudah.</h2>
   </article>
 </div>
-</header><br>
+</div>
+  </header><br>
+      
 
 <!-- Kalkulator section -->
 <!-- Gender selection -->
@@ -55,13 +55,15 @@
 <div class="jenis-kelamin">
   <h2>Pilih Gender Anda</h2>
   <form>
+
     <div class="gender-container">
-      <label class="pria" for="pria">
-        <input type="radio" id="pria" name="gender" value="pria">
+      <label class="pria" for="male">
+        <input type="radio" id="male" name="radio" value="pria" required/>
         <span class="male">Pria</span>
       </label>
-      <label class="wanita" for="wanita">
-        <input type="radio" id="wanita" name="gender" value="wanita">
+
+      <label class="wanita" for="female">
+        <input type="radio" id="female" name="radio" value="wanita" required/>
         <span class="female">Wanita</span>
       </label>
     </div>
@@ -76,37 +78,46 @@
         <h2>Kalkulasi</h2><br>
       </header>
           <div class="form">
-              <label for="berat-badan">Berat Badan (Kg)</label>
-              <input type="number" id="berat-badan" required/><br>
-              <label for="usia">Usia (Tahun)</label>
-              <input type="number" id="usia"required><br>
-              <label for="tinggi-badan">Tinggi Badan (Cm)</label>
-              <input type="number" id="tinggi-badan" required/>
+            <label for="weight">Berat Badan (kg)</label>
+            <input type="number" id="weight" required/><br>
+              <label for="age">Usia (Tahun)</label>
+              <input type="number" id="age"required><br>
+              <label for="height">Tinggi Badan (cm)</label>
+              <input type="number" id="height" required/>
           </div><br>
               <div class="button-container">
-                  <button class="reset">Reset</button>
-                  <button class="hitung">Lihat Hasil</button>
+                  <button class="calculate" id="submit" onclick="calculate();">Lihat Hasil</button>
+          </div>
+
+          <div class="result-wrapper" id="result">
+            <div class="hasil-container" id="yourBmi">
+              <p>BMI Anda adalah:</p>
+              <div class="result-container" id="resultNumber">26.73</div>
+              <p class="comment" id="comment"></p>
+            </div>
           </div>
   </form>
   </div>
 </div>
-    </section>
 
+    </section>
     <!-- Penjelasan, kesimpulan hasil -->
     <main class="article">
       <section id="about">
         <article>
           <h2>Apa itu BMI Calculator?</h2>
-          <p style="font-weight: 300;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officia quae iure similique quisquam accusamus, quibusdam assumenda mollitia doloribus quas, nisi atque maiores ipsa illum. Cum laudantium, odit saepe explicabo repellendus quasi, aperiam id quo corporis, doloremque animi? Dignissimos, quasi laudantium modi similique iure quam ducimus? Culpa hic similique sunt eum corrupti? Doloribus eius deleniti dignissimos odio illo nemo harum a voluptas, blanditiis iste quaerat facere necessitatibus minus vel aspernatur sit mollitia consequuntur quibusdam autem molestias itaque assumenda. Accusantium aliquid harum ipsa perspiciatis rerum ipsam, dolores reiciendis architecto laborum exercitationem quam, deserunt excepturi repellat nulla libero vitae expedita eos nam.</p>
+          <p class style="font-weight: 300; color: rgba(0, 0, 0, 0.5);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officia quae iure similique quisquam accusamus, quibusdam assumenda mollitia doloribus quas, nisi atque maiores ipsa illum. Cum laudantium, odit saepe explicabo repellendus quasi, aperiam id quo corporis, doloremque animi? Dignissimos, quasi laudantium modi similique iure quam ducimus? Culpa hic similique sunt eum corrupti? Doloribus eius deleniti dignissimos odio illo nemo harum a voluptas, blanditiis iste quaerat facere necessitatibus minus vel aspernatur sit mollitia consequuntur quibusdam autem molestias itaque assumenda. Accusantium aliquid harum ipsa perspiciatis rerum ipsam, dolores reiciendis architecto laborum exercitationem quam, deserunt excepturi repellat nulla libero vitae expedita eos nam.</p>
         </article>
       </section>
       
     </main>
   </main>
-  
-  
-  <footer>
-    <article>Made by Amir Hamzah</article>
-  </footer>
+  <div class="footer">
+    <footer class="footer-content">
+      <!-- <img class="logo" src="assets\Logo saya.png" width="28px" height="28px" style="color: #fff;"/> -->
+      &copy;Made by Amir Hamzah 😁
+    </footer>
+  </div>
+    <script src="js\script.js"></script>
 </body>
 </html>

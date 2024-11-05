@@ -2,7 +2,6 @@
 /* root font default */
 * {
   font-family: inter, sans-serif;
-  box-sizing: border-box;
 }
 
 html {
@@ -12,17 +11,21 @@ html {
 body {
   font-family: inter, sans-serif;
   background-color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 /* Inisialisasi root warna primer UI */
 :root {
-    --primary-color: #2bed00;
-    --secondary-color: #08e600;
-    --button-primary: #25ca00;
+    --primary-color: #00aa13;
+    --secondary-color: #09d922;
+    --button-primary: #00d103;
+    --button-secondary: #00c203;
 }
 
 /* Mencoba responsivitas dengan media queries */
 @media (max-width: 573px) {
+
   nav ul {
     flex-direction: column;
     align-items: center;
@@ -34,17 +37,31 @@ body {
     .logo-nav-kiri {
       display: none;
     }
-  }
+
+    }
+    
+    .header-wrapper {
+      padding-top: 80px;
+
+    }
+    }
 
   /* Penyesuaian letak dengan elemen padding-top karena Sebelumnya ketimpa oleh navbar ketika adaptasi lebar layar */
-  .header {
-    padding-top: 70px;
-  }
+.header {
+  padding-top: 60px;
 }
 
 .logo-nav-kiri {
   color: #000;
   text-decoration: none;
+}
+
+.span-logo {
+  color: var(--secondary-color);
+    background-color: #cbffcc;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 10px;
 }
 
 .logo-kiri {
@@ -98,9 +115,6 @@ nav ul {
     transition: ease-in 0.1s;
   }
 
-  main {
-        padding-top: 30px;
-  }
 
 /* Memposisikan judul & subjudul jadi di tengah */
   .header {
@@ -121,10 +135,10 @@ nav ul {
 
 /* Warna span dari judul */
 .calc {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
-/* Styling section jenis kelamin */
+/* Styling section gender */
 .jenis-kelamin {
   display: flex;
   flex-direction: column;
@@ -132,6 +146,7 @@ nav ul {
   align-items: center;
 }
 
+/* Membuat gender option menjadi sejajar */
 .pria {
   display: flex;
 }
@@ -177,28 +192,31 @@ input {
     font-size: 0.8rem;
   }
 
+/* Align ke center */
   .form-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
+  
+  
   .form-container {
-    width: 260px;
-    border-radius: 26px;
+    width: 250px;
+    border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 30px;
     box-shadow: 0px 10px 70px 0px rgba(184, 184, 184, 0.500);
     transform: scale(1.2)
     translateY(40px);
-}
-
-/* Penyesuaian warna outline saat user memasukkan input agar tidak terlalu kontras */
-.form input:focus {
+  }
+  
+  /* Penyesuaian warna outline saat user memasukkan input agar tidak terlalu kontras */
+  .form input:focus {
   outline: 1px solid rgba(0, 0, 0, 0.8);
 }
 
-button {
+/* Styling button */
+.calculate {
   padding: 8px;
   border-radius: 16px;
   border: none;
@@ -207,29 +225,13 @@ button {
 }
 
 .button-container {
-    display: flex;
     column-gap: 12px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.reset {
-  width: 40%;
-  color: #121212;
-  background-color: rgba(255, 255, 255, 0);
-  border: 1px solid rgba(29, 29, 29, 0.5)
-}
-
-
-.reset:hover {
-  cursor: pointer;
-  color: #fff;
-  background-color: rgb(29, 29, 29);
-  /* transform: translateY(1.4px); */
-  transition: ease-in-out 0.2s;
-}
-
-.hitung {
+.calculate {
+  width: 100%;
   padding-left: 14.5px;
   padding-right: 14.5px;
   color: #fff;
@@ -237,14 +239,58 @@ button {
   /* border: 1px solid rgba(0, 0, 0, 0.5) */
 }
 
-.hitung:hover {
-    cursor: pointer;
-    color: #fff;
-    background-color: #349b00;
-    /* transform: translateY(1.4px); */
-    transition: ease-in-out 0.2s;
+.calculate:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #349b00;
+  /* transform: translateY(1.4px); */
+  transition: ease-in-out 0.2s;
+}
+
+.hasil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.result-wrapper {
+  display: none;
+}
+
+.result-container {
+  display: flex;
+  background-color: #e6ffd7;
+  color: #6cff14;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 16px;
+  width: fit-content;
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
 main .article {
   padding: 8rem 7%;
+}
+
+.footer {
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 400;
+    width: 100%;
+    color: #fff;
+    padding-top: 1.1em;
+    padding-bottom: 1.1em;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  align-items: center;
 }

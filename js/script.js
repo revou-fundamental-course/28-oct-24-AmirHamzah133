@@ -1,30 +1,28 @@
-var age = document.getElementById("age");
-var height = document.getElementById("height");
-var weight = document.getElementById("weight");
-var male = document.getElementById("male");
-var female = document.getElementById("female");
-var resultNew = document.getElementById("submit");
-var hasil = document.getElementById("result");
-var comment = document.getElementById("comment");
-var angkaHasil = document.getElementById("resultNumber")
+// Menambahkan fungsi dari calculate
+function calculate() {
+  // Inisialisasi elemen HTML ke dalam variabel
+  const gender = document.querySelector('input[name="radio"]:checked').value;
+  const weight = parseFloat(document.getElementById("weight").value);
+  const height = parseFloat(document.getElementById("height").value) / 100; // Convert cm to m
+  const age = parseInt(document.getElementById("age").value);
 
-resultNew.onclick = function() {
-  if(age.value=='' || height.value=='' || weight.value=='' ||(male.checked==true && female.checked==true)){
-    hasil.style.display ="none";
-  }else if(age.value=='' || height.value=='' || weight.value=='' ||(male.checked==false && female.checked==false)){
-    hasil.style.display ="block";
+  // Kalkulasi BMI berdasarkan rumus
+  const bmi = weight / (height * height);
+
+  // Klasifikasi komen dari hasil kalkulasi
+  let comment;
+  if (bmi < 18.5) {
+    comment = "Berat Badan Kurang";
+  } else if (bmi >= 18.5 && bmi < 25) {
+    comment = "Berat Badan Normal";
+  } else if (bmi >= 25 && bmi < 30) {
+    comment = "Berat Badan Berlebih";
+  } else {
+    comment = "Obesitas";
   }
-}
 
-var comment = '';
-if(bmi<18.5){
-  result = 'Kurus';
-} else if(18.5<=bmi<=24.9){
-  result = 'healthy';
-} else if(25<=bmi&&bmi<=29.9){
-  result = 'Overweight';
-} else if(30<=bmi&&bmi<=34.9){
-  result = 'Obese';
-} else if(35<=bmi){
-  result = 'Sangat obesitas';
+  // Menunjukkan hasil dengan manipulasi value dari style display
+  document.getElementById("result").style.display = "block";
+  document.getElementById("resultNumber").textContent = bmi.toFixed(2);
+  document.getElementById("comment").textContent = comment;
 }

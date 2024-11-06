@@ -265,15 +265,15 @@ input {
 
 .result-container {
   display: flex;
-  background-color: rgb(20 194 41 / 90%);
-  color: rgb(151 252 88);
+  background-color: rgb(20 135 34 / 90%);
+  color: rgb(133 255 59);
   justify-content: center;
   align-items: center;
   padding: 8px;
   border-radius: 16px;
   width: fit-content;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 main .article {

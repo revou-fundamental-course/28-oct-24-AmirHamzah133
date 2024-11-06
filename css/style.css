@@ -19,8 +19,6 @@ body {
 :root {
     --primary-color: #00aa13;
     --secondary-color: #00b715;
-    --button-primary: #00d103;
-    --button-secondary: #00c203;
 }
 
 /* Mencoba responsivitas dengan media queries */
@@ -42,13 +40,23 @@ body {
     
     .header-wrapper {
       padding-top: 80px;
-
     }
     }
 
   /* Penyesuaian letak dengan elemen padding-top karena Sebelumnya ketimpa oleh navbar ketika adaptasi lebar layar */
 .header {
-  padding-top: 60px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0 183 21 / 3%);
+  border-top: rgba(0 183 21 / 10%) solid 1px;
+  border-bottom: rgba(0 183 21 /10%) solid 1px;
+
 }
 
 .logo-nav-kiri {
@@ -136,7 +144,22 @@ nav ul {
 /* Warna span dari judul */
 .calc {
   color: var(--secondary-color);
+  padding: 4px;
 }
+
+.calc:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+  background-color: rgba(0, 183, 21, 10%);
+  border-radius: 10px;
+  transition: ease-in 0.2s;
+}
+
+/* .calc:hover::after {
+  content: '+';
+  transition: ease-in 0.2s;
+  
+} */
 
 /* Styling section gender */
 .jenis-kelamin {
@@ -144,6 +167,7 @@ nav ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 14px;
 }
 
 /* Membuat gender option menjadi sejajar */
@@ -276,6 +300,12 @@ input {
   font-weight: 400;
 }
 
+.comment {
+  border: 1px dashed rgba(0, 0, 0, 0.500);
+  border-radius: 6px;
+  padding: 10px;
+}
+
 main .article {
   padding: 8rem 7%;
 }
@@ -285,12 +315,13 @@ main .article {
     font-size: 0.8rem;
     font-weight: 400;
     width: 100%;
-    color: #fff;
+    color: #000000;
     padding-top: 1.1em;
     padding-bottom: 1.1em;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0px 10px 70px 0px rgba(184, 184, 184, 0.500);
 }
 
 .footer-content {

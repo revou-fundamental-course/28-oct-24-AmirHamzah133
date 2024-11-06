@@ -38,7 +38,7 @@
   text-align: center;
   display: flex;
   align-items: center;">
-    <h1 class>BMI <span class="calc">Calculator</span></h1>
+    <h1 class>BMI <span class="calc">Calculator+</span></h1>
   </header>
   <article>
     <h2 class="subjudul" style="text-align: center;">Kalkulator untuk menghitung <span class="subjudul-color">berat badan Anda</span> dengan cepat dan mudah.</h2>
@@ -54,8 +54,8 @@
 <section id="service"> <!--memberi id service untuk navigasi -->
 <div class="jenis-kelamin">
   <h2>Pilih Gender Anda</h2>
+  
   <form>
-
     <div class="gender-container">
       <label class="pria" for="male">
         <input type="radio" id="male" name="radio" value="pria" required/>
@@ -89,9 +89,6 @@
                   <button class="calculate" id="submit" onclick="calculate();">Lihat Hasil</button>
           </div>
 
-
-          
-
           <div class="result-wrapper" id="result">
             <div class="hasil-container" id="yourBmi">
               <p>BMI Anda adalah:</p>
@@ -109,7 +106,15 @@
       <section id="about">
         <article>
           <h2>Apa itu BMI Calculator?</h2>
-          <p class style="font-weight: 300; color: rgba(0, 0, 0, 0.5);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officia quae iure similique quisquam accusamus, quibusdam assumenda mollitia doloribus quas, nisi atque maiores ipsa illum. Cum laudantium, odit saepe explicabo repellendus quasi, aperiam id quo corporis, doloremque animi? Dignissimos, quasi laudantium modi similique iure quam ducimus? Culpa hic similique sunt eum corrupti? Doloribus eius deleniti dignissimos odio illo nemo harum a voluptas, blanditiis iste quaerat facere necessitatibus minus vel aspernatur sit mollitia consequuntur quibusdam autem molestias itaque assumenda. Accusantium aliquid harum ipsa perspiciatis rerum ipsam, dolores reiciendis architecto laborum exercitationem quam, deserunt excepturi repellat nulla libero vitae expedita eos nam.</p>
+          <p class style="font-weight: 300; color: rgba(0, 0, 0, 0.5);">BMI calculator adalah kalkulator penghitung berat badan berdasarkan tinggi badan, berat badan (kg), dan usia. Setiap individu pasti menginginkan berat badan yang ideal, dengan mengetahui bahwa kategori berat badan Anda termasuk kedalam kategori berat badan yang baik, Anda bisa dengan lebih percaya diri dalam menjalani aktivitas sehari-hari. BMI calculator adalah alat untuk menghitung berat badan yang memiliki berbagai macam kategori kesehatan berat badan.</p>
+
+          <h2>Klasifikasi Berat Badan</h2>
+          <ul style="color: rgba(0, 0, 0, 0.5)";>
+            <li>Kurang dari 18,5 = Berat badan kurang (underweight).</li>
+            <li>18,5 &mdash; 24,9 = Berat badan normal.</li>
+            <li>25 &mdash; 29,9 = Berat badan berlebih (Overweight).</li>
+            <li>30 ke atas = Obesitas.</li>
+          </ul>
         </article>
       </section>
       
@@ -118,7 +123,7 @@
   <div class="footer">
     <footer class="footer-content">
       <!-- <img class="logo" src="assets\Logo saya.png" width="28px" height="28px" style="color: #fff;"/> -->
-      &copy;Made by Amir Hamzah 😁
+      &copy;2024 Made by Amir Hamzah
     </footer>
   </div>
     <script src="js\script.js"></script>

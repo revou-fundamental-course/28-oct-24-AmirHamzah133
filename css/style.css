@@ -18,7 +18,7 @@ body {
 /* Inisialisasi root warna primer UI */
 :root {
     --primary-color: #00aa13;
-    --secondary-color: #09d922;
+    --secondary-color: #00b715;
     --button-primary: #00d103;
     --button-secondary: #00c203;
 }
@@ -57,7 +57,7 @@ body {
 }
 
 .span-logo {
-  color: var(--secondary-color);
+    color: var(--secondary-color);
     background-color: #cbffcc;
     padding-left: 6px;
     padding-right: 6px;
@@ -235,14 +235,14 @@ input {
   padding-left: 14.5px;
   padding-right: 14.5px;
   color: #fff;
-  background-color: var(--button-primary);
+  background-color: #349b00;
   /* border: 1px solid rgba(0, 0, 0, 0.5) */
 }
 
 .calculate:hover {
   cursor: pointer;
   color: #fff;
-  background-color: #349b00;
+  background-color: #297a00;
   /* transform: translateY(1.4px); */
   transition: ease-in-out 0.2s;
 }

@@ -10,6 +10,7 @@
     <!-- Inisialisasi font dari Google Fonts (Inter) -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="js\script.js"></script>
   </head>
   <body>
 
@@ -18,17 +19,18 @@
     <nav class="navbar">
             <ul>
               <div class="logo-kiri">
-                <a class="logo-nav-kiri" href="#home"><h1>BMI<span class="span-logo">Calc+</span></h1></a>
+                <svg class="my-svg" width="26px" height="26px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.77 340.37"><g id="Layer_2" data-name="Layer 2"><g id="Logo_A_2" data-name="Logo A 2"><polygon points="294.77 226.91 262.02 283.64 253.24 268.44 229.26 226.91 196.52 170.19 196.51 170.18 163.76 113.46 139.79 71.94 131.01 56.73 139.79 41.52 163.76 0 196.51 56.72 196.51 56.74 196.52 56.73 229.27 113.46 253.24 154.98 262.02 170.18 294.77 226.91"/><polygon points="163.76 226.92 139.79 268.44 131.01 283.64 98.26 226.91 131.01 170.19 139.79 185.4 163.76 226.92"/><polyline points="26.33 329.24 0 283.64 26.33 238.04 32.76 226.91 65.51 170.18 83.06 139.78 98.26 113.46 131.01 170.19 98.26 226.91 83.06 253.24 65.51 283.64"/><polyline points="65.51 283.64 32.76 340.37 26.33 329.24"/></g></g></svg>
+                <a class="logo-nav-kiri" href="#home"><h1>BMI<span class="span-logo">Calculator+</span></h1></a>
               </div>
               <li><a class="menu" href="#home">Home</a></li>
               <li><a class="menu" href="#about">About</a></li>
               <li><a class="menu" href="#service">Service</a></li>
             </ul>
           </nav>
-        </header><br><br><br><br><br><br> <!--Masih menggunakan br untuk membuat baris baru karena keterbatasan pengetahuan (penggunaan tag mungkin kurang profesional)-->
+        </header><br><br><br><br><br><br><br><br> <!--Masih menggunakan br untuk membuat baris baru karena keterbatasan pengetahuan (penggunaan tag mungkin kurang profesional)-->
          <header>
-  </section>
-
+        </section>
+        
 <!-- Konten utama -->
 <main>
   <header>
@@ -38,11 +40,21 @@
   text-align: center;
   display: flex;
   align-items: center;">
-    <h1 class>BMI <span class="calc">Calculator+</span></h1>
+    <h1 class>BMI  <span class="calc">Calculator+</span></h1>
   </header>
   <article>
-    <h2 class="subjudul" style="text-align: center;">Kalkulator untuk menghitung <span class="subjudul-color">berat badan Anda</span> dengan cepat dan mudah.</h2>
+    <h2 class="subjudul" style="text-align: center;">Lihat dan pantau kesehatan <span class="subjudul-color">berat badan Anda</span> dengan cepat dan mudah, di mana saja.</h2>
   </article>
+    <div class="button-header-wrapper">
+      <div class="button-header-container">
+        <a href="#about">
+          <button class="about">Tentang</button>
+        </a>
+        <a href="#service">
+          <button class="feature">Fitur Utama</button>
+        </a>
+      </div>
+  </div>
 </div>
 </div>
   </header><br>
@@ -93,20 +105,20 @@
             <div class="hasil-container" id="yourBmi">
               <p>BMI Anda adalah:</p>
               <div class="result-container" id="resultNumber">00.00</div>
-              <p class="comment" id="comment" style="font-weight: 600;     color: rgb(34 101 0 / 50%);";>Berat Badan Normal</p>
+              <p class="comment" id="comment" style="font-weight: 600; color: var(--primary-color);";>Berat Badan Normal & Ideal</p>
             </div>
           </div>
-  </form>
-  </div>
-</div>
-
+        </form>
+      </div>
+    </div>
+    
     </section>
     <!-- Penjelasan, kesimpulan hasil -->
     <main class="article">
       <section id="about">
         <article>
           <h2>Apa itu BMI Calculator?</h2>
-          <p class style="font-weight: 300; color: rgba(0, 0, 0, 0.5);">BMI calculator adalah kalkulator penghitung berat badan berdasarkan tinggi badan, berat badan (kg), dan usia. Setiap individu pasti menginginkan berat badan yang ideal, dengan mengetahui bahwa kategori berat badan Anda termasuk kedalam kategori berat badan yang baik, Anda bisa dengan lebih percaya diri dalam menjalani aktivitas sehari-hari. BMI calculator adalah alat untuk menghitung berat badan yang memiliki berbagai macam kategori kesehatan berat badan.</p>
+          <p class style="font-weight: 300; color: rgba(0, 0, 0, 0.5);">BMI calculator adalah kalkulator pengukur kualitas berat badan seseorang berdasarkan tinggi badan dan berat badan (kg). Setiap orang pasti menginginkan berat badan yang ideal, dengan mengetahui bahwa kategori berat badan Anda termasuk kedalam kategori berat badan yang baik, Anda bisa dengan lebih bugar dan percaya diri dalam menjalani aktivitas Anda sehari-hari. BMI calculator adalah alat untuk menghitung dan mengkalkulasikan serta memantau kualitas dan kesehatan indeks massa tubuh Anda.</p>
 
           <h2>Klasifikasi Berat Badan</h2>
           <ul style="color: rgba(0, 0, 0, 0.5)";>
@@ -115,6 +127,39 @@
             <li>25 &mdash; 29,9 = Berat badan berlebih (Overweight).</li>
             <li>30 ke atas = Obesitas.</li>
           </ul>
+          <h2>Solusi untuk Memperbaiki dan Menjaga Indeks Massa Tubuh Anda</h2>
+          <ol>
+            <li class="list">Berat Badan Kurang (Underweight)</li>
+            <ul>
+              <li>
+                Tingkatkan asupan kalori dengan mengonsumsi makanan seperti kacang-kacangan, alpukat, biji-bijian, dan makanan olahan.
+              </li>
+              <li>Rutin berolahraga seperti melakukan latihan kekuatan otot Anda.</li>
+              <li>Istirahat yang cukup.</li>
+            </ul>
+            <li class="list">Berat Badan Normal</li>
+            <ul>
+              <li>
+                Pantau berat badan Anda secara berkala.
+              </li>
+              <li>Pertahankan gaya hidup sehat seperti berolahraga dan menjaga pola makanan tetap sehat dan seimbang</li>
+              <li>Kelola stress Anda untuk tetap stabil.
+              </li>
+            </ul>
+            <li class="list">Berat Badan Berlebih (Overweight)</li>
+            <ul>
+              <li>
+                Kurangi asupan kalori yang berlebih.
+              </li>
+              <li>Lakukan aktivitas fisik ringan seperti berjalan kaki, berlari, berenang, dan senam untuk membakar kalori berlebih.</li>
+              <li>kelola stress agar tetap stabil.</li>
+            </ul>
+            <li class="list">Obesitas</li>
+            <ul>
+              <li>Lakukan perubahan gaya hidup Anda menjadi lebih sehat dengan mulai melakukan aktivitas fisik ringan, pola makan yang sehat dan seimbang, dan manajemen stress yang baik </li>
+              <li>Konsultasi dan rutin kontrol ke ahli medis seperti dokter atau ahli gizi.</li>
+            </ul>
+          </ol>
         </article>
       </section>
       
@@ -123,9 +168,19 @@
   <div class="footer">
     <footer class="footer-content">
       <!-- <img class="logo" src="assets\Logo saya.png" width="28px" height="28px" style="color: #fff;"/> -->
-      &copy;2024 Made by Amir Hamzah
+      &copy;2024 Made by Amir Hamzah 😷
+      <div class="menu-footer-container">
+      <li>
+      <a class="menu-footer" href="#home">Home</a>
+      </li>
+      <li>
+      <a class="menu-footer" href="#about">About</a>
+      </li>
+      <li>
+      <a class="menu-footer" href="#service">Service</a>
+      </li>
+      </div>
     </footer>
   </div>
-    <script src="js\script.js"></script>
 </body>
 </html>

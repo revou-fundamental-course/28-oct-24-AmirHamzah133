@@ -4,9 +4,8 @@ function calculate() {
   const gender = document.querySelector('input[name="radio"]:checked').value;
   const weight = parseFloat(document.getElementById("weight").value);
   const height = parseFloat(document.getElementById("height").value) / 100; // Convert cm to m
-  const age = parseInt(document.getElementById("age").value);
 
-  // Kalkulasi BMI berdasarkan rumus
+  // Kalkulasi BMI berdasarkan rumus BMI
   const bmi = weight / (height * height);
 
   // Klasifikasi komen dari hasil kalkulasi
@@ -23,6 +22,8 @@ function calculate() {
 
   // Menunjukkan hasil dengan manipulasi value dari style display
   document.getElementById("result").style.display = "block";
+  // Menampilkan hasil bmi
   document.getElementById("resultNumber").textContent = bmi.toFixed(2);
+  // Menampilkan komen / kategori kesehatan
   document.getElementById("comment").textContent = comment;
 }

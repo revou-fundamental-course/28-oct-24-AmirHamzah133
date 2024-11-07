@@ -106,7 +106,7 @@ header {
 
 .about, .feature {
   border-radius: 10px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   padding-left: 14px;
   padding-right: 14px;
   padding-top: 8px;
@@ -272,6 +272,7 @@ nav ul {
 
 /* Warna span dari judul */
 .calc {
+  user-select: none;
   color: var(--secondary-color);
   padding: 4px;
 }

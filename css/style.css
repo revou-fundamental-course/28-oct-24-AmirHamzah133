@@ -140,7 +140,7 @@ header {
 
 .span-logo {
     color: var(--secondary-color);
-    background-color: rgb(45, 174, 99, 16%);
+    background-color: rgb(45, 174, 99, 14%);
     padding: 2px 8px;
     border-radius: 24px;
 }
@@ -150,7 +150,7 @@ header {
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-  column-gap: 2px;
+  column-gap: 10px;
   font-size: 1.2rem;
 }
 
@@ -341,7 +341,7 @@ input {
 .calculate:hover {
   cursor: pointer;
   color: #fff;
-  background-color: #25a35a;
+  background-color: #229251;
   /* transform: translateY(1.4px); */
   transition: ease-in-out 0.2s;
 }

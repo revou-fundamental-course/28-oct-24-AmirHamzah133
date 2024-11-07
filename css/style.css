@@ -27,12 +27,12 @@ body {
 }
 
 /* Mencoba responsivitas dengan media queries */
-@media (max-width: 573px) {
+@media (max-width: 733px) {
 
   nav ul {
     flex-direction: column;
     align-items: center;
-
+    
     .img {
       display: none;
     }
@@ -50,7 +50,19 @@ body {
     .my-svg {
       display: none;
     }
+
+    .elemen-center svg {
+      display: none;
     }
+
+    .search {
+      display: none;
+    }
+
+    .icon-container {
+      display: none;
+    }
+  }
 
   /* Penyesuaian letak dengan elemen padding-top karena Sebelumnya ketimpa oleh navbar ketika adaptasi lebar layar */
 .header {
@@ -94,12 +106,12 @@ header {
 
 .about, .feature {
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1.1em;
   padding-left: 14px;
   padding-right: 14px;
   padding-top: 8px;
   padding-bottom: 8px;
-  font-weight: 400;
+  font-weight: 500;
   
 }
 
@@ -152,6 +164,47 @@ header {
   justify-content: flex-start;
   column-gap: 10px;
   font-size: 1.2rem;
+}
+
+.elemen-center {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.icon-container {
+  display: flex;
+  gap: 12px;
+}
+
+.search-icon {
+  stroke: var(--primary-color);
+}
+
+.search-icon:hover {
+  cursor: pointer;
+  stroke: #8d8d8d;
+}
+
+.user-icon {
+  stroke: var(--primary-color);
+}
+
+.user-icon:hover {
+  cursor: pointer;
+  stroke: #8d8d8d;
+}
+
+.elemen-center input {
+  background-color: rgb(45, 174, 99, 4%);
+  border: 1px solid var(--primary-color);
+  padding: 4px 8px;
+  width: 60%;
+  padding: 10px 14px;
+  border-radius: 24px;
 }
 
 /* Penyesuaian navbar agar posisinya tetap fix ketika website discroll */

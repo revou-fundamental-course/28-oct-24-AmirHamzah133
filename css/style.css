@@ -86,7 +86,7 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 16px;
-  width: 96%;
+  width: 98%;
   background-color: rgba(0 183 21 / 3%);
   border-top: rgba(0 183 21 / 3%) solid 1.5px;
   border-bottom: rgba(0 183 21 /3%) solid 1.5px;
@@ -132,7 +132,7 @@ header {
 .feature {
   background-color: rgba(255, 255, 255, 0%);
   color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  border: 1px solid rgb(46, 167, 96, 90%);
   border-radius: 10px;
 }
 

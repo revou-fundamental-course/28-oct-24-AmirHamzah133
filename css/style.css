@@ -338,6 +338,21 @@ input {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 4px;
   border-radius: 6px;
+  /* border-top: none;
+  border-left: none;
+  border-right: none; */
+}
+
+.kalkulasi-judul {
+  padding-bottom: 10px;
+}
+
+.berat-badan {
+  margin: 2px;
+}
+
+.tinggi-badan {
+  margin: 2px;
 }
 
 /* Penyesuaian posisi & text-size */
@@ -366,7 +381,7 @@ input {
   
   /* Penyesuaian warna outline saat user memasukkan input agar tidak terlalu kontras */
   .form input:focus {
-  outline: 1px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 /* Styling button */

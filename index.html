@@ -95,13 +95,13 @@
   <div class="form-container">
     <form onsubmit="return (false);">
       <header style="text-align: center;">
-        <h2>Kalkulasi</h2><br>
+        <h2 class="kalkulasi-judul">Kalkulasi</h2><br>
       </header>
           <div class="form">
-            <label for="weight">Berat Badan (kg)</label>
-            <input type="number" id="weight" required/><br>
-              <label for="height">Tinggi Badan (cm)</label>
-              <input type="number" id="height" required/>
+            <label class="berat-badan" for="weight">Berat Badan (kg)</label>
+            <input class="berat-badan" type="number" id="weight" required/><br>
+              <label class="tinggi-badan" for="height">Tinggi Badan (cm)</label>
+              <input class="tinggi-badan" type="number" id="height" required/>
           </div><br>
               <div class="button-container">
                   <button class="calculate" id="submit" onclick="calculate();">Lihat Hasil</button>

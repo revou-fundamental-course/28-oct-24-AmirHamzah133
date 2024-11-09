@@ -13,7 +13,7 @@ function calculate() {
   if (bmi < 18.5) {
     comment = "Berat Badan Kurang";
   } else if (bmi >= 18.5 && bmi < 25) {
-    comment = "Berat Badan Normal";
+    comment = "Berat Badan Normal & Ideal";
   } else if (bmi >= 25 && bmi < 30) {
     comment = "Berat Badan Berlebih";
   } else {

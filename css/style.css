@@ -96,7 +96,7 @@ header {
 .button-header-container {
   display: flex;
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 18px;
   font-weight: 400;
 }
 
@@ -273,7 +273,7 @@ nav ul {
   .subjudul {
     font-size: 1.1rem;
     font-weight: 400;
-    color:rgba(23 33 23 / 45%);
+    color:rgba(0 0 0 / 50%);
     text-align: center;
     margin-left: 14px;
     margin-right: 14px;
